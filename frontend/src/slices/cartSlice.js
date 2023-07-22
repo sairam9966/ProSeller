@@ -34,7 +34,7 @@ const cartSlice = createSlice({
     },
 
     clearCartItems: (state, action) => {
-      state.cartitems = [];
+      state.cartItems = [];
       return updateCart(state);
     },
   },
