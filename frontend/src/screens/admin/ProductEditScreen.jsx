@@ -46,12 +46,13 @@ const ProductEditScreen = () => {
    console.log(updatedProduct);
    const result=await updateProduct(updatedProduct);
    if(result.error){
-    console.log('error');
+    
     toast.error(result.error);
    }
    else{
-    console.log('no error');
+  
     toast.success('Product updated');
+    refetch();
     navigate('/admin/productlist');
    }
   }
@@ -100,7 +101,7 @@ const ProductEditScreen = () => {
         label='Choose file'
         onChange={uploadFileHandler}>
         </Form.Control>
-
+  {loadingUpload && <Loader/>}
         </Form.Group>
         <Form.Group controlId='brand' className='my-2'>
           <Form.Label>
