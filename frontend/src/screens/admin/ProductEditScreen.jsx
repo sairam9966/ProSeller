@@ -69,13 +69,13 @@ const ProductEditScreen = () => {
   }
   return <>
   <Link to='/admin/productlist' className='btn btn-light my-3'>Go Back</Link>
-  <FormContainer>
+  <FormContainer >
     <h1>Edit Product</h1>
     {loadingUpdate && <Loader/>}
     {isLoading ?<Loader/> :error ? <Message variant='danger'>{error}</Message>:(
-      <Form onSubmit={submitHandler}>
+      <Form onSubmit={submitHandler} className="formcontainer">
         <Form.Group controlId='name' className='my-2'>
-          <Form.Label>
+          <Form.Label className='formLabel'>
              Name
           </Form.Label>
           <Form.Control type='text' placeholder='Enter name' value={name} onChange={((e)=>
@@ -83,7 +83,7 @@ const ProductEditScreen = () => {
           </Form.Control>
         </Form.Group>
         <Form.Group controlId='price' className='my-2'>
-          <Form.Label>
+          <Form.Label className='formLabel'>
              Price
           </Form.Label>
           <Form.Control type='number' placeholder='Enter Price' value={price} onChange={((e)=>
@@ -91,7 +91,7 @@ const ProductEditScreen = () => {
           </Form.Control>
         </Form.Group>
         <Form.Group controlId='image' className='my-2'>
-        <Form.Label>
+        <Form.Label className='formLabel'>
           Image
         </Form.Label>
         <Form.Control type='text' placeholder='Enter image url' value={image} onChange={(e)=>setImage}>
@@ -104,7 +104,7 @@ const ProductEditScreen = () => {
   {loadingUpload && <Loader/>}
         </Form.Group>
         <Form.Group controlId='brand' className='my-2'>
-          <Form.Label>
+          <Form.Label className='formLabel'>
              Brand
           </Form.Label>
           <Form.Control type='text' placeholder='Enter Brand' value={brand} onChange={((e)=>
@@ -112,7 +112,7 @@ const ProductEditScreen = () => {
           </Form.Control>
         </Form.Group>
         <Form.Group controlId='countInStock' className='my-2'>
-          <Form.Label>
+          <Form.Label className='formLabel'>
              Count In Stock
           </Form.Label>
           <Form.Control type='number' placeholder='Enter countInStock' value={countInStock} onChange={((e)=>
@@ -120,7 +120,7 @@ const ProductEditScreen = () => {
           </Form.Control>
         </Form.Group>
         <Form.Group controlId='category' className='my-2'>
-          <Form.Label>
+          <Form.Label className='formLabel'>
              Category
           </Form.Label>
           <Form.Control type='text' placeholder='Enter Category' value={category} onChange={((e)=>
@@ -128,7 +128,7 @@ const ProductEditScreen = () => {
           </Form.Control>
         </Form.Group>
         <Form.Group controlId='description' className='my-2'>
-          <Form.Label>
+          <Form.Label className='formLabel'>
             Description
           </Form.Label>
           <Form.Control type='text' placeholder='Enter Description' value={description} onChange={((e)=>

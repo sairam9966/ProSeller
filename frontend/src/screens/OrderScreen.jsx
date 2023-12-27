@@ -112,12 +112,12 @@ const OrderScreen = () => {
             
               <ListGroup.Item key={index}>
                         <Row>
-                          <Col md={1}>
+                          <Col className="textdark" md={1}>
                             <Image src={item.image} alt={item.name} fluid rounded></Image>
                           </Col>
                           <Col>
                           <Link to={`/product/${item.product}`} >{item.name}</Link></Col>
-                          <Col md={4}>
+                          <Col className="textdark" md={4}>
                             {item.qty} x ${item.price}= $ {item.qty*item.price}
                           </Col>
                         </Row>
@@ -134,21 +134,25 @@ const OrderScreen = () => {
           </ListGroup.Item>
           <ListGroup.Item>
             <Row>
-              <Col>Items</Col>
-              <Col>${order.itemsPrice}</Col>
+              <Col className="textdark">Items</Col>
+              <Col className="textdark">${order.itemsPrice}</Col>
             </Row>
+            <hr />
             <Row>
-              <Col>Shipping</Col>
-              <Col>${order.shippingPrice}</Col>
+              <Col className="textdark">Shipping</Col>
+              <Col className="textdark">${order.shippingPrice}</Col>
             </Row>
+            <hr />
             <Row>
-              <Col>Tax</Col>
-              <Col>${order.taxPrice}</Col>
+              <Col className="textdark">Tax</Col>
+              <Col className="textdark">${order.taxPrice}</Col>
             </Row>
+            <hr />
             <Row>
-              <Col>Total</Col>
-              <Col>${order.totalPrice}</Col>
+              <Col className="textdark">Total</Col>
+              <Col className="textdark">${order.totalPrice}</Col>
             </Row>
+            <hr />
            
             {!order.isPaid && (
               <ListGroup.Item>

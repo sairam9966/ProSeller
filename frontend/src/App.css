@@ -1,0 +1,62 @@
+*{
+  font-size:18px;
+  font-family: Arial, Helvetica, sans-serif;
+  /* color:black */
+}
+
+h1,h2,h3,h4,h5,h6,p{
+  color:rgb(18, 7, 58);
+}
+Nav.Link{
+  color:whitesmoke;
+}
+
+span{
+  color: whitesmoke;
+  font-weight: 500;
+}
+
+.maindiv{
+  background-color: rgb(198, 215, 227);
+}
+h1{
+  color:rgb(6, 9, 35);
+}
+
+.formLabel{
+  color:rgb(6, 9, 35);
+}
+
+
+.footerdiv{
+  background-color: rgb(198, 215, 227);
+}
+
+.rating{
+  color: black;
+  background-color: rgb(51, 105, 138);
+  border-radius: 2px;
+  padding:1px;
+}
+
+.rating{
+  color:red;
+}
+
+.textdark{
+  color: rgb(5, 31, 39);
+}
+
+th,tr{
+  color: rgb(5, 31, 39);
+}
+
+.formcontainer{
+  border:2px solid rgb(5, 31, 39);
+  border-radius: 6px;
+  padding:30px;
+  background-color: rgb(126, 152, 170);
+}
+.carouselname{
+  color:white;
+}

@@ -44,9 +44,9 @@ const RegisterScreen = () => {
   return (
     <FormContainer>
       <h1>Sign Up</h1>
-      <Form onSubmit={submitHandler}>
+      <Form onSubmit={submitHandler} className="formcontainer">
         <Form.Group controlId='name' className='my-3'>
-          <Form.Label>Name</Form.Label>
+          <Form.Label className='formLabel'>Name</Form.Label>
           <Form.Control
             type='text'
             placeholder='Enter Name'
@@ -55,7 +55,7 @@ const RegisterScreen = () => {
           ></Form.Control>
         </Form.Group>
         <Form.Group controlId='email' className='my-3'>
-          <Form.Label>Email Address</Form.Label>
+          <Form.Label className='formLabel'>Email Address</Form.Label>
           <Form.Control
             type='email'
             placeholder='Enter email'
@@ -64,7 +64,7 @@ const RegisterScreen = () => {
           ></Form.Control>
         </Form.Group>
         <Form.Group controlId='password' className='my-3'>
-          <Form.Label>Password</Form.Label>
+          <Form.Label className='formLabel'>Password</Form.Label>
           <Form.Control
             type='password'
             placeholder='Enter password'
@@ -73,7 +73,7 @@ const RegisterScreen = () => {
           ></Form.Control>
         </Form.Group>
         <Form.Group controlId='confirmPassword' className='my-3'>
-          <Form.Label>Confirm Password</Form.Label>
+          <Form.Label className='formLabel'>Confirm Password</Form.Label>
           <Form.Control
             type='password'
             placeholder='Enter Confirm Password'

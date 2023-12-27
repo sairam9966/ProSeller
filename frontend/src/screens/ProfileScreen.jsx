@@ -43,11 +43,11 @@ const ProfileScreen = () => {
   }
   return (
     <Row>
-      <Col md={3}>
+      <Col className="textdark" md={3}>
         <h2>User Profile</h2>
         <Form onSubmit={submitHandler}>
           <Form.Group controlId='name' className='my-2'>
-            <Form.Label>
+            <Form.Label className='formLabel'>
               Name
             </Form.Label>
             <Form.Control
@@ -59,7 +59,7 @@ const ProfileScreen = () => {
             </Form.Control>
           </Form.Group>
           <Form.Group controlId='email' className='my-2'>
-            <Form.Label>
+            <Form.Label className='formLabel'>
               Email
             </Form.Label>
             <Form.Control
@@ -71,7 +71,7 @@ const ProfileScreen = () => {
             </Form.Control>
           </Form.Group>
           <Form.Group controlId='password' className='my-2'>
-            <Form.Label>
+            <Form.Label className='formLabel'>
               Password
             </Form.Label>
             <Form.Control
@@ -83,7 +83,7 @@ const ProfileScreen = () => {
             </Form.Control>
           </Form.Group>
           <Form.Group controlId='confirmpassword' className='my-2'>
-            <Form.Label>
+            <Form.Label className='formLabel'>
               Confirm Password
             </Form.Label>
             <Form.Control
@@ -98,7 +98,7 @@ const ProfileScreen = () => {
           {loadingUpdateProfile && <Loader/>}
         </Form>
       </Col>
-      <Col md={9}>
+      <Col  className="textdark" md={9}>
         <h2>My Orders</h2>
         {isLoading ? (<Loader/>): error ?(<Message>
         {

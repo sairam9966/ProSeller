@@ -29,7 +29,7 @@ const[logoutApiCall]=useLogoutMutation();
 }
   return (
     <header>
-      <Navbar bg='dark' variant='dark' expand='md' collapseOnSelect>
+      <Navbar bg='primary' variant='dark' className="navbar" expand='md' collapseOnSelect>
         <Container>
           <LinkContainer to='/'>
           <Navbar.Brand >
@@ -42,26 +42,26 @@ const[logoutApiCall]=useLogoutMutation();
               <SearchBox/>
               <LinkContainer to='/cart'>
               <Nav.Link >
-                <FaShoppingCart /> Cart
+                <FaShoppingCart /> <span>Cart</span>
                 {cartItems.length>0 && <Badge pill bg='success' style={{marginLeft:'5px'}}>
                   {cartItems.reduce((a,c)=>a+c.qty,0)}
                   </Badge>}
               </Nav.Link>
               </LinkContainer>
               {userInfo?(
-                <NavDropdown title={userInfo.name} id='username'>
+                <NavDropdown bg='light'title={userInfo.name} id='username'>
                <LinkContainer to='/profile'>
                 <NavDropdown.Item>Profile</NavDropdown.Item>
                </LinkContainer>
                <NavDropdown.Item onClick={logoutHandler}>
-                    Logout
+                   Logout 
                </NavDropdown.Item>
                 </NavDropdown>
               ):(
                 <LinkContainer to='/login'>
-                <Nav.Link>
-                  <FaUser />
-                  Sign In
+                <Nav.Link bg='light'>
+                  <FaUser bg="light"/>
+                  <span>Sign In</span>
                 </Nav.Link>
                 </LinkContainer>
               )}

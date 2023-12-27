@@ -52,7 +52,7 @@ const PlaceOrderScreen = () => {
     <>
       <CheckOutSteps step1 step2 step3 step4 />
       <Row>
-        <Col md={8}>
+        <Col className="textdark"  md={8}>
           <ListGroup variant='flush'>
             <ListGroup.Item>
             <h2>Shipping</h2>
@@ -77,7 +77,7 @@ const PlaceOrderScreen = () => {
 
               <ListGroup.Item key={index}>
                 <Row>
-               <Col md={1}>
+               <Col className="textdark" md={1}>
                 <Image src={item.image}
                 alt={item.name}
                 fluid
@@ -85,12 +85,12 @@ const PlaceOrderScreen = () => {
 
                 </Image>
                </Col>
-               <Col>
+               <Col className="textdark">
                <Link to={`/product/${item.product}`}>
                 {item.name}
                </Link>
                </Col>
-               <Col md={4}>
+               <Col md={4} className="textdark">
                
                  {item.qty} x ${item.price} = ${item.qty*item.price}
                </Col>
@@ -106,7 +106,7 @@ const PlaceOrderScreen = () => {
             </ListGroup.Item>
             </ListGroup> 
         </Col>
-        <Col md={4}>
+        <Col  className="textdark" md={4}>
           <Card>
             <ListGroup variant='flush'>
              <ListGroup.Item>
@@ -115,36 +115,36 @@ const PlaceOrderScreen = () => {
              </ListGroup.Item>
              <ListGroup.Item>
               <Row>
-                <Col>Items:
+                <Col className="textdark" >Items:
                 </Col>
-                <Col>
+                <Col className="textdark">
                  ${cart.itemsPrice}
                 </Col>
               </Row>
              </ListGroup.Item>
              <ListGroup.Item>
               <Row>
-                <Col>Shipping:
+                <Col className="textdark" >Shipping:
                 </Col>
-                <Col>
+                <Col className="textdark">
                  ${cart.shippingPrice}
                 </Col>
               </Row>
              </ListGroup.Item>
              <ListGroup.Item>
               <Row>
-                <Col>Tax:
+                <Col className="textdark">Tax:
                 </Col>
-                <Col>
+                <Col className="textdark">
                  ${cart.taxPrice}
                 </Col>
               </Row>
              </ListGroup.Item>
              <ListGroup.Item>
               <Row>
-                <Col>Total:
+                <Col className="textdark">Total:
                 </Col>
-                <Col>
+                <Col className="textdark">
                  ${cart.totalPrice}
                 </Col>
               </Row>

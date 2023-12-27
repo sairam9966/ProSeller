@@ -68,7 +68,7 @@ try{
       <h3>{product.name}</h3>
     </ListGroup.Item>
     <ListGroup.Item>
-      <Rating value={product.rating} text={`${product.numReviews} reviews`}/>
+      <Rating className="rating" value={product.rating} text={`${product.numReviews} Reviews`}/>
     </ListGroup.Item>
     <ListGroup.Item>
     Price: ${product.price}
